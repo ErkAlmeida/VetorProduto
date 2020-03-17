@@ -19,12 +19,14 @@ public class Programa {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		//Define o tamanho do vetor 
 		System.out.printf("Digite o tamanho do Vetor:");
 		
 		int n = sc.nextInt();
-		
+		//Instanciando o vetor 
 		Produto[] vetor = new Produto[n];
 		
+		//entrada dos valores
 		for(int i=0; i< n; i++)
 		{
 			sc.nextLine();
@@ -36,12 +38,14 @@ public class Programa {
 			vetor[i] = new Produto(nome, preco);
  		}
 		
+		//Soma o preco dos produtos 
 		double soma = 0;
 		for(int i = 0; i < n;i++) 
 		{
 			soma += vetor[i].getPreco();
 		}
 		
+		//Imprime o resultado e calcula a media de preco
 		System.out.printf("O Preço medio dos produtos:" + (soma)/n);
 		
 	
